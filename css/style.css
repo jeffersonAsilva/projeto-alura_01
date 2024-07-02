@@ -1,0 +1,389 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    color:#E5E5E5;
+
+    height: 100vh;
+    width: 100%;
+
+  /*  background: linear-gradient(45deg, #33547e, #E5E5E5);*/
+    background: linear-gradient(45deg,#32A89C, #E5E5E5);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+body, textarea, button {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 8rem;
+    
+   /* background-color: #33547e;*/
+   background-color: #00635A;
+    align-items: center;
+
+    box-shadow: 0 2px 5px 2px rgba(12, 12, 12, 0.08);
+
+    position: fixed;
+}
+
+.logo {
+    width: 3.2rem;
+    height: 4.2rem;
+
+    margin-left: 1.6rem;
+    padding-top: 0.5rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    align-items: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.text {
+    width: 34.3rem;
+    height: 30rem;
+
+    border: none;
+    background: none;
+
+    margin: 12rem 1.6rem 0 1.6rem;
+    
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4.8rem;
+
+    color: #E5E5E5;
+    text-shadow: 1px 1px 2px black;
+}
+
+.text::placeholder {
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 4.8rem;
+
+    color: #E5E5E5;
+    text-shadow: 1px 1px 2px black;
+}
+
+.text:focus {
+    outline: none;
+}
+
+.information {
+    color: #E5E5E5;
+    text-shadow: 1px 1px 1px black;
+
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+.information img {
+    margin: 1rem 0 0 3rem;
+}
+
+.buttons {
+    display: inline;
+}
+
+.btn-encrypt {
+    height: 6.7rem;
+    width: 32.8rem;
+
+   /* background-color: #0A3871;*/
+   background-color: #00635A;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    
+    border: 1.5px solid #e5e5e596;
+    border-radius: 2.4rem;
+
+    cursor: pointer;
+    margin: 1.6rem 1.6rem 0 3rem;
+
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.btn-encrypt:hover {
+    /*background: #24548f;*/
+    background: #009688;
+}
+
+.btn-decrypt {
+    height: 6.7rem;
+    width: 32.8rem;
+
+    background-color: #E5E5E5;
+    color:#00635A;
+    font-weight: 600;
+    
+    border: 2px solid #00635A;
+    border-radius: 2.4rem;
+    
+    cursor: pointer;
+    margin: 2.4rem 1.6rem 0 3rem;
+
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.btn-decrypt:hover {
+    background: #dafaf6;
+}
+
+.message {
+    border: none;
+    border-radius: 2.4rem;
+    color: #00635A;
+
+    margin: 6.4rem 1.6rem 4rem 3rem;
+    padding: 3.5rem 0.5rem 0.5rem 0.5rem;
+
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.message:focus {
+    outline: none;
+}
+
+.message::placeholder {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    
+    color: #343A40;
+    
+    text-align: center;
+
+    padding-top: 3.2rem;
+}
+
+.btn-copy {
+    display: none;
+    background: none;
+    color: #00635A;
+    
+    border-radius: 2.4rem;
+    
+    font-weight: 600;
+    
+    border: 2px solid #00635A;
+    cursor: pointer;
+    
+    width: 27.9rem;
+    height: 6.7rem;
+
+    position: absolute;
+
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.btn-copy:hover {
+    background: #dafaf6;
+}
+
+footer {
+    display: flex;
+    font-size: 1.4rem;
+    margin: 3rem 0 0 5rem;
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    font-weight: 700;
+    margin-right: 0.8rem;
+}
+
+footer a {
+    color: #D8DFE8;
+    text-decoration: none;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 399px) {
+    header {
+        width: 100%;
+    }
+
+    footer {
+        position: fixed;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    header {
+        width: 100%;
+    }
+
+    .logo {
+        height: 5rem;
+        margin-left: 4rem;
+    }
+
+    main {
+        display: inline;
+    }
+
+    .text {
+        width: 68.8rem;
+        margin: 16rem 0 0 4rem;
+    }
+
+    .information img {
+        margin-left: 4rem;
+    }
+
+    .buttons {
+        align-items: center;
+    }
+
+    .message {
+        border-radius: 3.2rem;
+        width: 68.8rem;
+
+        margin-left: 4rem;
+        padding: 3.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 8.4rem;
+    }
+
+    main {
+        display: flex;
+    }
+
+    section {
+        width: 65.6rem;
+    }
+
+    .text {
+        margin-left: 4rem;
+        width: 58rem;
+    }
+
+    .information img {
+        margin: 6rem 0 0 4rem;
+    }
+
+    .buttons {
+        display: flex;
+        width: 65.6rem;
+    }
+
+    .btn-decrypt {
+        background-color: #D8DFE8;
+        color: #00635A;
+    }
+
+    .message {
+        border-radius: 3.2rem;
+        height: 52rem;
+        width: 34rem;
+        
+        margin: 12rem 2rem 2rem 4rem;
+    }
+
+    .message::placeholder {    
+        padding-top: 20rem;
+    }
+
+    .btn-copy {
+        display: inline;
+        position: absolute;
+
+        top: 54rem;
+        right: 0.1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .message {        
+        margin: 12rem 2rem 2rem 22rem;
+    }
+
+    .btn-copy {
+        right: 9.5rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    .btn-copy {
+        right: 16rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .text {
+        margin-left: 20rem;
+        height: 26rem;
+        width: 56rem;
+    }
+
+    .information img {
+        margin: 1rem 0 0 20rem;
+    }
+
+    .buttons {
+        margin-left: 14rem;
+    }
+
+    .message {
+        width: 40rem;
+        height: 43.5rem;
+        margin-left: 28rem;
+    }
+
+    .message::placeholder {    
+        padding-top: 10rem;
+    }
+
+    .btn-copy {
+        top: 44rem;
+        right: 16rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .btn-copy {
+        right: 41rem;
+    }
+}

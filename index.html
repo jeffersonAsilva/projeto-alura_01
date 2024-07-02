@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image" href="img/logo-alura.svg" />
+    <title>Decodificador de texto</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <img class="logo" src="/img/logo-alura.svg" alt="Logo da Alura" />
+      <h1> Decodificador de textos </h1>
+    </header>
+
+    <main>
+      <section>
+        <textarea
+          class="text"
+          cols="41"
+          rows="4"
+          placeholder="Digite o seu texto"
+        ></textarea>
+
+        <div class="information">
+          <h6>
+            <img src="/img/symbol.svg" alt="" />
+            Apenas letras minúsculas e sem acento.
+          </h6>
+        </div>
+
+        <div class="buttons">
+          <button class="btn-encrypt" onclick="btnEncryptar()">
+            Criptografar
+          </button>
+          <button class="btn-decrypt" onclick="btnDecryptar()">
+            Descriptografar
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <textarea
+          class="message"
+          cols="42"
+          rows="10"
+          placeholder="Nenhuma mensagem encontrada"
+        ></textarea>
+        <button class="btn-copy" onclick="copiar()">Copiar</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>® Desenvolvido por Jefferson Adriano da Silva</p>
+      
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
