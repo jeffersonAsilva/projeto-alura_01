@@ -8,4 +8,4 @@ Praticando lógica de programação: Challenge Decodificador de Texto.
 
 ## Imagem do Projeto
 
-<img src="https://github.com/jeffersonAsilva/Gera-o-Tech-Unimed-BH_modelo_ERR_Diagram_oficina/blob/main/modelo_oficina.png">
+<img src="https://github.com/jeffersonAsilva/projeto-alura_01/blob/main/recorte3.png">
